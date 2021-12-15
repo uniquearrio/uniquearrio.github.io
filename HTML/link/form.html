@@ -10,21 +10,38 @@
     <form action="request.php" method="post">
         <label for="name">NAME</label>
         <input type="name" name="user_name" id="name" placeholder="eg.Mg Mg" required>
+
         <br><br>
-        <label for="email">email</label>
+        
+        <label for="email">Email</label>
         <input type="email" name="user_email" id="email" required>
+          
         <br><br>
-        <label for="password">passwort</label>
+
+        <label for="password">Password</label>
         <input type="user_password" name="password" id="password" required>
         <br><br>
-        <label for="phone">phone</label>
-        <input type="number" name="user_email" id="phone" value="09779443653" readonly>
+        <label for="phone">Phone</label>
+        <input type="number" name="user_number" id="phone" value="09779443653" readonly>
         <br><br>
-        <label for="passport">passport</label>
+        <label for="passport">Passport</label>
         <input type="file" accept="image/*" number="user_passport" id="passport" >
         <br><br>
-        <label for="gender"></label>
-        <input type="text">
+        <label for="gender">Gender</label><br><br>
+        <input type="RADIO" name="gender" value="male" id="male" ><label for="male">male</label>
+        <br><br>
+        <input type="RADIO" name="gender" value="female" id="female" ><label for="female">female</label>
+        <br><br>
+        <input type="radio" name="gender" value="others" id="others"><label for="others">others</label>
+        <br><br>
+        <label for="">Hobby</label><br><br>
+        <input type="checkbox" name="travelling" value="travelling" id="travelling"><label for="travelling">Travelling</label>
+        <input type="checkbox" name="gaming" id="gaming"><label for="gaming">Gaming</label>
+        <input type="checkbox" name="gardening" id="gardening"><label for="gardening">Gardening</label>
+        <br><br>
+        <label for="address"Address></label>
+        <textarea name="user_address" id="address" cols="30" rows="10"></textarea>
+        <br><br>
         <button type="submit">Submit</button>
     </form>
 </body>

@@ -173,15 +173,25 @@
 <!-- comment session -->
     <h3 align="center" id="Cm">Leave a comment</h3>
 <div align="center">
+    <table>
+        <tbody>
     <form action="request.php" method="post" >
-        <label for="name">Name:</label>
-        <input type="name" name="user_name" id="name" required>
+        <tr>
+            <td><label for="name">Name:</label></td>
+            <td><input type="name" name="user_name" id="name" required></td>
+        </tr>
         <br><br>
-        <label for="email">Email:</label>
-        <input type="email" name="user_email" id="email" required>
+        <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" name="user_email" id="email" required></td>
+        </tr>
         <br><br>
-        <label for="comment">Commet:</label>
-        <textarea name="user_comment" id="comment" cols="30" rows="10"></textarea>
+        <tr>
+            <td><label for="comment">Commet:</label></td>
+            <td><textarea name="user_comment" id="comment" cols="30" rows="10"></textarea></td>
+        </tr>
+        </tbody>
+    </table>
         <br><br>
         <button type="add">Add</button>
 </div>  

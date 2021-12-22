@@ -8,23 +8,54 @@
 </head>
 <body>
     <h1>Exam Result</h1>
-    <form action="request.php" method="post">
+    <form action="request.php" method="post" name="myForm">
         <label for="Turbo C">Turbo C</label>
-        <input type="text" name="mark_of_TurboC" id="mark_of_TurboC" placeholder="Enter turbo C Mark" required>
+        <input type="number" name="TurboC" id="TurboC" placeholder="Enter turbo C Mark" required>
 
         <br><br>
         
         <label for="Java">Java</label>
-        <input type="text" name="mark_of_Java" id="mark_of_Java" placeholder="Enter Java Mark" required>
+        <input type="number" name="Java" id="Java" placeholder="Enter Java Mark" required>
           
         <br><br>
 
         <label for="JavaScript">JavaScript</label>
-        <input type="text" name="mark_of_JavaScript" id="mark_of_JavaScript" placeholder="Enter Javascript Mark" required>
+        <input type="number" name="JavaScript" id="JavaScript" placeholder="Enter Javascript Mark" required>
         <br><br>
 
-        <button type="Result">Result</button>
+        <button type="button" onclick="result()">Result</button>
         
-    
+    </form>
+
+    <script>
+        function result(){
+            
+            let c = document.myForm.TurboC.value;
+            console.log(c);
+            let java = document.myForm.Java.value;
+            console.log(java);
+            let JavaScript = document.myForm.JavaScript.value;
+            console.log(JavaScript);
+
+            //&&
+            //||
+            //!
+            
+            if (c >= 50 && java >=50 && JavaScript >= 50){
+                document.write("<h1>This student is pass!</h1>")
+            }else{
+                document.write("<h1>this student is fail!</h1>")
+            }
+            if (c >= 81){
+                document.write("<h1>Gone Htoo Par Tal in C!</h1>")
+            }
+            if (java >= 81){
+                document.write("<h1>Gone Htoo Par Tal in Java!</h1>")
+            }
+            if (JavaScript >= 81){
+                document.write("<h1>Gone Htoo Par Tal in Javascript!</h1>")
+            }
+        }
+    </script>
 </body>
 </html>

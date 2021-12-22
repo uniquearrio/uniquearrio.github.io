@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Array
+        //[] or Array
+        let arr = [1,2,3];
+        let arr1 =Array('a','b','c');
+        console.log(arr);
+        console.log(crr1);
+        console.log(arr[2]);
+        console.log(arr1[1]);
+
+        let arr2 =[1,2,3,'a','b','c',['x','y',4]];
+        console.log(arr2);
+        console.log(arr2[5]);
+        console.log(arr2[4]);
+
+        let multi = [[1,2,3],['a','b','c'],['x',34,35]];
+        console.log(multi[2],[1]);
+
+        let fruits = [];
+        fruits[0] = 'Apple';
+        fruits[1] = 'Orange';
+        fruits[2] = 'Banana';
+        console.log(fruits);
+
+        fruits.push('Mango');
+        console.log(fruits);
+
+        fruits.unshift('Cherry');
+        console.log(fruits);//shae ka htae chin yin thone
+
+        fruits.pop();
+        console.log(fruits);
+
+        fruits.shift();
+        console.log(fruits);//shae ka htae chin yin thone
+
+        fruits.sort();
+        console.log(fruits);
+
+        fruits.reverse();
+        console.log(fruits);
+
+        let arr_a =[1,2,3];
+        let arr_b = ['a','b','c'];
+        let arr_c = arr_a + arr_b;
+        let arr_c = arr_a.concact( arr_b);
+        console.log(arr_c);
+        let arr_d = [...arr_a,...arr_b];
+        console.log(arr_d);
+
+
+
+    </script>
+</body>
+</html>

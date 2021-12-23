@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali</title>
+</head>
+<body>
+    <form action="" name="myform">
+        <label for="x"></label>
+        <input type="number" name=x id=x placeholder="x" necessary>
+        *
+        <label for="y"></label>
+        <input type="number" name=y id=y placeholder="y" necessary><br>
+        <button type="button" onclick="answer1() ">multiply</button>
+         <button type="button" onclick="answer2()">division</button>
+         <button type="button" onclick="answer3()">plus</button>
+         <button type="button" onclick="answer4()">minus</button>
+    </form>
+
+    <script>
+        function answer1(){
+            let x = document.myform.x.value;
+            console.log(x);
+            let y = document.myform.y.value;
+            console.log(y); 
+            let z = x * y;
+             
+            
+            document.write(z)
+        }
+        function answer2(){
+            let x = document.myform.x.value;
+            console.log(x);
+            let y = document.myform.y.value;
+            console.log(y); 
+            let z = x / y;
+            document.write(z);
+        }
+        function answer3(){
+            let x = document.myform.x.value;
+            console.log(x);
+            let y = document.myform.y.value;
+            console.log(y); 
+            let z = -(-x - y);
+            document.write(z);
+        }
+        function answer4(){
+            let x = document.myform.x.value;
+            console.log(x);
+            let y = document.myform.y.value;
+            console.log(y); 
+            let z = x - y;
+            document.write(z);
+        }
+    </script>
+    <br><br>
+    <h1>Ali</h1>
+    <form action="" name="yourform">
+        <label for="number"></label>
+        <input type="number" name="m" id="m" necessary placeholder="Type a number you want">
+        <button type="button" onclick="ANS()">Answer</button>
+    </form>
+    <script>
+        function ANS(){
+         let m = document.yourform.m.value;
+         for (let n = 1; n<= 12; n++){
+            let result = n * m;
+            console.log (result);
+            document.write(`<h1>${n} x ${m} = ${result}</h1>`);
+        }
+    }
+    </script>
+</body>
+</html>

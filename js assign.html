@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <label for="Name">Name</label>
+    <input type="text" name="name" id="name" required>
+
+    <br><br>
+    <label for="Age">Age</label>
+    <input type="number" name="age" id="age" required>
+    </form>
+
+    <br><br>
+    <button onclick="Add()"> Add </button>
+    <br><br>
+    <table border="1" cellspacing="0" cellpadding="20">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>     
+        </thead>
+        <tbody id="tbody">
+            <tr id="tr">
+
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let j=1;
+         function Add() {
+             let name = document.querySelector'#name');
+             let age = document.querySelector('#age');
+             let tbody = document.querySelector
+             ('#tbody');  
+             let mydata = '';
+           
+             let data =[{ Name:'name',Age:'name'}];
+             for(let value of data){
+               mydata += `<tr>
+                    <td>${j++}</td>
+                    <td>${value.name}</td>
+                    <td>${value.age}</td>
+                     </tr>`;
+             }
+            
+        
+        
+    }
+    </script>
+
+</body>
+</html>

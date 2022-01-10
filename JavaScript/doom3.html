@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">CSS Manumulation with dom</h1>
+    <button type="button" onclick="move()">Move</button>
+    <img src="dom.png" alt="" id="img" width="200" height="300">
+   <br><br>
+   <img src="dom.png" alt="" id="image"width=''height='' onmouseover="big()" onmouseout="normal()">
+   <script>
+       function move(){
+           document.querySelector('#h1').style.color = "red";
+           document.querySelector('#h1').style.backgroundColor = "black";
+
+           let img = document.querySelector('#img');
+           img.style.width = '500px';
+           img.style.height ='500px';
+       }
+
+       function big(){
+           let image = document.querySelector('#image');
+           image.style.width ='600px';
+           image.style.height = '300px';
+       }
+
+       function normal() {
+           let image = document.querySelector('#image');
+           image.style.width = '300px';
+           image.style.height = '150px';
+       }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        .error{
+            border-color: red;
+        }
+        small{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1>calculator</h1>
+    <form action="">
+        <label for="num1">Number One:</label>
+        <input type="number" name="num1" id="num1">
+        <small id="num1_err"></small>
+        <br><br>
+        <label for="num2">Number Two:</label>
+        <input type="number" name="num2" id="num2">
+        <small id="num2_err"></small>
+        <br><br>
+        <label for="result">Result:</label>
+        <input type="number" name="result" id="result" readonly>
+        <br><br>
+        <button type="button" onclick="add()">Add</button>
+        <button type="button" onclick="sub()">Sub</button>
+    </form>
+
+    <script>
+        function formValidation(){
+            let num1 = document.querySelector('#num1');
+            let num2 = document.querySelector('#num2');
+
+            let num1_err = document.querySelector('#num1_err');
+            let num2_err = document.querySelector('#num2_err');
+
+            let number1 = num1.value;
+            let number2 = num2.value;
+
+            if (number1 === '' || number2 === ''){
+                num1.removeAttribute('class');
+                num2.removeAttribute('class');
+                num1_err.innerHTML = '';
+                num2_err.innerHTML = '';
+
+                if (number1 === ''){
+                    showError(num1_err,num1,'Number One is Required');
+                }
+
+                if (number2 === ''){
+                    showError(num2_err,num2,'Number two is required');
+                }
+
+                function showError(numError,numInput,message){
+                    numInput.setAttribute('class','error');
+                    numError.innerHTML = message;
+                }
+
+            }else{
+                num1.removeAttribute('class');
+                num2.removeAttribute('class');
+                num1_err.innerHTML = '';
+                num2_err.innerHTML = '';
+            
+                return {number1,number2};
+            }
+        }
+        function add(){
+            let numbers = formValidation();
+            console.log(numbers.number1);
+            let result = Number(numbers.number1)+Number(numbers.number2);
+            document.querySelector('#result').value = result;
+        }
+
+        function sub(){
+            let numbers = formValidation();
+            console.log(numbers.number1);
+            let result = Number(numbers.number1)-Number(numbers.number2);
+            document.querySelector('#result').value = result;
+        }
+    </script>
+
+</body>
+</html>

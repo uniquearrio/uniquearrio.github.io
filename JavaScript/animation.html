@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #js{
+            height: 214px;
+            background-image: url("js.jpg");
+            background-repeat: repeat;
+            background-position: center;
+            
+        }
+        #train{
+            position: relative;
+            margin-top: -125px;
+        }
+    </style>
+</head>
+<body>
+    <div id=js></div>
+    <img src="js2.gif" alt="" width="300" height="131" id="train">
+    <br><br>
+    <button type="button" onclick="startTrain()">Start</button>
+
+    <script>
+        function startTrain(){
+            let train = document.querySelector('#train');
+
+            let start = Date.now();
+
+            let timer = setInterval(function(){
+                let timePass = Date.now() - start;
+            
+
+            train.style.left = timePass/5+'px';
+
+
+            if (timePass > 5000) clearInterval(timer);
+        },20)
+
+    }
+    </script>
+</body>
+</html>

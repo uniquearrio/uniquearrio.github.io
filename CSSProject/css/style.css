@@ -1,0 +1,341 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.logo{
+    width: 100px;
+    height: 70px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+.brand_name{
+    margin-top: -50px;
+    margin-left: 85px;
+    font-size: 30;
+    font-family: Dongle;
+}
+@font-face {
+    font-family: Dongle;
+    src: url(../Dongle/Dongle-Regular.ttf);
+}
+.nav_brand{
+    display: inline-block;
+}
+nav.navbar ul{
+    float: right;
+}
+.navbar ul li{
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 40px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.navbar{
+    height: 90px;
+}
+.navbar ul li a:hover{
+    color: rgba(7, 123, 168, 0.918);
+    letter-spacing: 4px;
+    transition-duration: .5s;
+}
+.img{
+    width: 100%;
+    
+}
+.backgroundtext{
+    position: absolute;
+    top: 250px;
+    left:70px;
+}
+.pp{
+    font-family: Dongle;
+    margin-bottom: 10px;
+}
+.shop{
+    background-color: white;
+    border-color: rgba(7, 123, 168, 0.918);
+    color: rgba(7, 123, 168, 0.918);
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.shop:hover{
+    color: white;
+    background-color: rgba(7, 123, 168, 0.918);
+}
+
+.header{
+    text-align: center;
+}
+.divided{
+    width: 100px;
+    margin: auto;
+    border: 1px solid rgba(7, 123, 168, 0.918);
+}
+.product{
+    display: grid;
+    grid-template-columns:auto auto auto auto ;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    grid-gap: 50px;
+    text-align: center;
+}
+.product_img{
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 10px 20px rgb(0,0,0,.15);
+    
+}
+.red{
+    color: red;
+}
+.about{
+    background-image: url(../images/bk1.jpg);
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+.about div{
+    padding: 60px;
+}
+.divid{
+    width: 40px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.pk{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.pk div img{
+    border-radius: 5px;
+}
+.sar{
+    margin-left: 30px;
+}
+.packaging_header{
+    margin-left: 50px;
+    font-family: Dongle;
+    font-size: 50px;
+    
+}
+div h2 {
+    font-family: Dongle;
+}
+
+.support{
+    background-color: rgb(185, 158, 158);
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 70px;
+    padding: 30px 0px 30px 30px;
+}
+
+.support_icon p{
+    display: inline-block;
+    margin-left: 30px;
+}
+.footer{
+    background-color: rgb(43, 42, 42);
+    height: 230px;
+}
+.nav{
+    color:grey;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.designed{
+    color: gray;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.icon{
+    color: grey;
+    display: inline-block;
+    margin: 20px 10px 0px;
+}
+/* css for shop page atart*/
+
+.SAD_heading{
+    font-family: Dongle;
+    background-color: rgb(207, 205, 205);
+}
+
+.megaSimg{
+    width: 70%;
+    height: 350px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.megaStext{
+    position: absolute;
+    margin-top: -250px;
+    margin-left: 60px;
+}
+.megaStext h1{
+    font-family: Dongle;
+    color: rgb(207, 205, 205);
+    box-shadow: 5px;
+    font-size: 60px;
+}
+
+.megaSbutton{
+    border-color: azure;
+    word-spacing: 2px;
+    border: rgb(79, 192, 192) solid;
+    border-radius: 5px;
+    background-color: azure;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.megaSbutton:hover{
+    color: azure;
+    background-color: rgb(79, 192, 192);
+
+}
+
+.Bseller{
+    float: right;
+    margin-top: -350px;
+    width: 300px;
+    margin-right: 20px;
+    margin-left: -10px;
+}
+.sale_prize{
+    color: white;
+    background-color: red;
+}
+.best_seller_prize{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: -65px;
+}
+
+.Bseller div h1{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: Dongle;
+    color: rgb(139, 136, 136);
+}
+
+.catigory_type{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: rgb(139, 136, 136) solid;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    box-shadow: rgb(139, 136, 136) 0 10px 10px;
+}
+.catigory_type{
+    font-family: Dongle;
+    font-size: 20px;
+}
+.summer_winter h1{
+    font-family: Dongle;
+    font-size: 25px;
+}
+.rare h1{
+    font-family: Dongle;
+    font-size: 40px;
+}
+.catigory_type h3{
+    color: red;
+}
+
+.rare{
+    margin-top: 25px;
+    margin-left: 55px;
+    margin-right: 10px;
+    
+}
+.rare img{
+    border-radius: 5px;
+    box-shadow: rgb(139, 136, 136) 0 10px 10px;
+}
+
+.rare_text{
+    position: absolute;
+    margin-top: -230px ;
+    margin-left: 70px;
+    color: rgb(5, 234, 255);
+    text-indent: 3px;
+}
+
+.summer_winter{
+    display: grid;
+    grid-template-columns: auto auto;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.summer{
+    border: rgb(139, 136, 136) solid;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: rgb(139, 136, 136) 0 10px 10px;
+}
+.winter{
+    border: rgb(139, 136, 136) solid;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: rgb(139, 136, 136) 0 10px 10px;
+}
+
+hr{
+    border: thistle;
+    float: none;
+    margin-top: 30px;
+}
+/* css for shop page end */
+/* css for contact page start */
+.contact_heading{
+    font-family: Dongle;
+    background-color:rgb(207, 205, 205) ;
+    text-align: left;
+    font-size: 30px;
+}
+.contact{
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: Dongle;
+    font-size: 30px;
+    
+}
+.email{
+    font-family: Dongle;
+}
+.email_boxshadow input{
+    box-shadow: 0 5px 5px rgb(139, 136, 136);
+}
+.email_boxshadow button{
+    box-shadow: 0 5px 5px rgb(139, 136, 136);   
+}
+.email_boxshadow select{
+    box-shadow: 0 5px 5px rgb(139, 136, 136);
+}
+.email_boxshadow textarea{
+    box-shadow: 0 5px 5px rgb(139, 136, 136);
+}
+/* css for contact page end */
+/* css for about page start */
+/* css for about page end */

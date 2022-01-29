@@ -1,0 +1,183 @@
+h1{
+    color: gray;
+    text-transform: uppercase;
+}
+/* universal selector */
+*{
+    /* color: red;Text */
+    /* color: #09c7ed; *//*hex*/
+    color: rgb(3, 4,5);
+    line-height: normal;
+    padding: auto;
+    word-spacing: normal;
+}
+/* tag or element selector */
+div{
+    color: sandybrown;
+    width: 1000px;
+}
+    /* attribute selector */
+    /* a[target="_blank"]{
+        color: red;
+        text-decoration: none;
+    } */
+
+    /* id selector */
+    #p2{
+        color: red;
+        word-spacing: 30px;
+        line-height: 10px;
+        text-transform: uppercase;
+    }
+    /* class selector */
+    .p1{color: blue;}
+    /* descendent selector */
+    .desc a{color:red}
+    /* child selector */
+    .child > a{
+        color: yellow;
+    }
+/* pseudo */
+a:link{color: pink;}
+a:hover{color: yellow;}
+a:active{color: green;letter-spacing: 40px;}
+a:visited{color: brown;}
+
+/* target  */
+div:target{
+    border: 1px solid black;
+}
+ p:target{
+    border: 1px solid black;
+} 
+h1{
+    text-align: center;
+}
+.border1{
+    border: 2px dotted black;
+}
+.border2{
+    border-top: 2px double blue;
+}
+.borderstyle{
+   /* border-style: solid double dotted groove;
+    top/ right/ button/ left */
+    /*border-style: solid dotted double;
+    top /leftandright/ button*/
+    /*border-style: double dashed;
+    top and button/ left and right*/
+    border-style: double;
+}
+.borderW{
+    border-style: dashed;
+    border-width: 3px;
+}
+/* margin */
+.Mar{
+    border: 1px solid red;
+    margin: 40px;
+}
+.marmix{
+    border: 1px solid black;
+    margin: 40px 10px 40px ;
+    padding: 10px;
+}
+.padding{
+    border: solid blue;
+    padding: 40px 0px 0px 60px;
+}
+
+/* layout */
+.Inline{
+    border: 1px solid black;
+    width: 400px;
+    display: inline-block;
+}
+.block{
+    border: 1px blueviolet;
+    width: 300px;
+    height: 80px;
+    display: inline-block;
+}
+/* float */
+div.floatL img{
+    width:40%;
+    float: left;
+}
+div.clear{
+    clear: both;
+}
+
+div.floatR img{
+    width: 40%;
+    float: right;
+}
+/* grid */
+.gridone div,div.gridtwo,div.gridthree,div.gridfour div{
+    text-align: center;
+    grid-template-columns: auto auto auto;
+    
+}
+div.gridtwo{
+    grid-column-gap: 40px;
+}
+div.gridthree{
+    row-gap: 30px;
+}
+div.gridfour{
+    column-gap: 40px;
+}
+div.gridfive{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+div.gridsix{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* position */
+.relativeparent{
+    border: 1px solid black;
+    width: 1000px;
+    height: 600px;
+}
+.relative{
+    border: 1px solid red;
+    width: 500px;
+    height: 400px;
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+.absoluteparent{
+    position: relative;
+    border: 1px solid black;
+    width: 1000px;
+    height: 600px;
+}
+.absolute{
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    border: 1px solid yellowgreen;
+    width: 500px;
+    height: 300px;
+}
+.fixed{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+.font{
+    font-family: 'Neonderthaw', cursive;
+}
+
+@font-face {
+    src: url(Neonderthaw/Neonderthaw-Regular.ttf);
+    font-family: 'Neonderthaw';
+}
+.offlineF{
+    font-family: 'Neonderthaw';
+}

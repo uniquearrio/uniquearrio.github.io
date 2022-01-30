@@ -338,4 +338,55 @@ hr{
 }
 /* css for contact page end */
 /* css for about page start */
+.about_heading{
+    background-color: rgb(139, 136, 136);
+    font-family: Dongle;
+}
+.about_img{
+    width: 100%;
+    border-radius: 5px;
+    margin: 20px 10px;
+    height: 450px;
+}
+.who h1{
+    text-align: center;
+    margin-top: -280px;
+    padding: 10px;
+    font-size: 60px;
+    font-family: Dongle;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    color: rgb(139, 136, 136);
+}
+.about_text{
+    
+    margin-left: 10px;
+    text-align: left;
+}
+
+.about_div{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 160px;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.about_div img{
+    border-radius: 10px;
+    width: 150px;
+    margin-left: 150px;
+}
+.list{
+    margin-top: 20px;
+    margin-left: 380px;
+    line-height: 30px;
+}
+.list h1{
+    font-family: Dongle;
+    font-size: 70px;
+    color: rgb(139, 136, 136);
+}
+
+
 /* css for about page end */

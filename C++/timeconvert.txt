@@ -1,0 +1,15 @@
+(1) input => cout / cin 
+//  (2) Process  => business logic => 
+// main => 
+//  seconds => 
+// hour minutes seconds => 
+// 3600 seconds => 1 hour : 0 minutes : 0 seconds 
+// 3700 seconds => 1 hours : 1 minutes : 40 seconds 
+// algorithm => 
+(1) accept seconds input from user
+(2) to get hours divide seconds with 3600  / 
+(3) to get minutes , divide seconds with 3600 and take remainder % 
+(4) to get minutes , divide  seconds from step-3 with 60 / 
+(5) to get second , divide second from step-3 with 60 and take remainder %
+
+// (3) output ==>

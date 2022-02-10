@@ -273,7 +273,7 @@ div h2 {
     position: absolute;
     margin-top: -230px ;
     margin-left: 70px;
-    color: rgb(5, 234, 255);
+    color: white;
     text-indent: 3px;
 }
 
@@ -335,6 +335,9 @@ hr{
 }
 .email_boxshadow textarea{
     box-shadow: 0 5px 5px rgb(139, 136, 136);
+}
+.iframe{
+    border-radius: 10px;
 }
 /* css for contact page end */
 /* css for about page start */

@@ -39,11 +39,6 @@
                     }
                 }console.log('#images');
 
-            var textArr =[
-                {name:"text#1", id: 1, placeholder: "text#3"},
-                {name:"text#2", id: 2, placeholder: "text#4"},
-                {name:"text#3", id: 3, placeholder: "text#5"},   
-                ]
 
 
             $("#images").on("click","img",function(){
@@ -60,23 +55,12 @@
                     $("#workspace").html(img) ;            
                     $(".newimgname").html(title) ;   
 
-                    var imgbox =imgArr[index].box_count;
-                    console.log(imgbox)
+                    var textbox =imgArr[index].box_count;
                             var data=""
-                    $.each(textArr,function(i,v){ 
-                        data += `<div class="extradiv">
-                            <input type="text" placeholder="${v.placeholder}" data-id="${v.id}" class="mynewtext">
-                           </div>  `    
-                          
-                            if(imgbox == (i+3)){
-                                return false;
-                            }
-                        })
                     }
             })
             // generate loke tae a pine
             $("#mytbody").on("click","#generatebtn",function(){   
-                    // alert(index)
                     $(".defalutimg").hide(); 
                     var index= $("#content img.newimg").data("id");
                     var ls = localStorage.getItem("memes_img")
@@ -91,7 +75,7 @@
                             text1:$("#text2").val(),
                             }, function( resp ) {
                             if (resp.success == true){
-                            var img = `<img src="${resp.data.url}"  width="350px"  height="400px">`
+                            var img = `<img src="${resp.data.url}">`
                             $("#workspace").html(img)
                             }
                             });

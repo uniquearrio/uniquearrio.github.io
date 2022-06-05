@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memeG</title>
+    <style>
+        #images{
+            width: 250px;
+            height: 80px;
+            overflow: auto;
+            overflow-y: hidden;
+            margin: 0 auto;
+            white-space: nowrap
+        }
+    </style>
+    <script src="../../jquery.min.js"></script>
+    <script>
+        // get_data
+        $(function(){
+            $.get("https://api.imgflip.com/get_memes",function(resp){
+                var imgArr = resp.data.memes;
+                var imgArrJson = JSON.stringify(imgArr);
+                localStorage.setItem("memes_img",imgArrJson)
+            })
+
+            getdata();
+                function getdata(){
+                    var ls = localStorage.getItem("memes_img")
+                    if(ls){
+                    var imgArr = JSON.parse(ls)
+                    var data =""
+
+                    $.each(imgArr,function(i,v){
+                    data += `<img src="${v.url}" alt="" data-id="${i}" class="imgmeme">`                   
+                    })
+                    $("#images").html(data)
+                    }
+                }console.log('#images');
+
+            var textArr =[
+                {name:"text#1", id: 1, placeholder: "text#3"},
+                {name:"text#2", id: 2, placeholder: "text#4"},
+                {name:"text#3", id: 3, placeholder: "text#5"},   
+                ]
+
+
+            $("#images").on("click","img",function(){
+                    $(".defalutimg").hide(); 
+                    $("#defaultimgname").hide(); 
+                    var index = $(this).data("id")
+                    var ls = localStorage.getItem("memes_img")
+                    if(ls){
+                    var imgArr = JSON.parse(ls)
+                    var chooseurl = imgArr[index].url;
+                    var choosetext = imgArr[index].name;
+                    var img =`<img src = "${chooseurl}" width="350px" data-id="${index}"  class="newimg" height="400px" >`
+                    var title =`<h4>${choosetext}</h4>`
+                    $("#workspace").html(img) ;            
+                    $(".newimgname").html(title) ;   
+
+                    var imgbox =imgArr[index].box_count;
+                    console.log(imgbox)
+                            var data=""
+                    $.each(textArr,function(i,v){ 
+                        data += `<div class="extradiv">
+                            <input type="text" placeholder="${v.placeholder}" data-id="${v.id}" class="mynewtext">
+                           </div>  `    
+                          
+                            if(imgbox == (i+3)){
+                                return false;
+                            }
+                        })
+                    }
+            })
+            // generate loke tae a pine
+            $("#mytbody").on("click","#generatebtn",function(){   
+                    // alert(index)
+                    $(".defalutimg").hide(); 
+                    var index= $("#content img.newimg").data("id");
+                    var ls = localStorage.getItem("memes_img")
+                    if(ls){
+                    var imgArr = JSON.parse(ls)
+
+                    $.post( "https://api.imgflip.com/caption_image",{
+                            template_id: imgArr[index].id,
+                            username: "thetpainghtutfly",
+                            password: "thetpainghtutfly",
+                            text0:$("#text1").val(),
+                            text1:$("#text2").val(),
+                            }, function( resp ) {
+                            if (resp.success == true){
+                            var img = `<img src="${resp.data.url}"  width="350px"  height="400px">`
+                            $("#workspace").html(img)
+                            }
+                            });
+                           
+                            getdata();
+                        }
+
+        })
+        })
+    </script>
+    
+</head>
+<body>
+    <table class="mytable" cellpadding="15" cellspacing="0">
+        <tbody>
+            <tr>
+                <td rowspan="3">
+                    <div id="workspace" style="display: inline-block; margin: right 50px;">
+                        <img src="https://i.imgflip.com/30b1gx.jpg" alt="" class="defaultimg" width="500" height="600">
+                        <h4 class="defaultimgname"></h4>
+                        <h4 class="newimgname"></h4>
+                        
+                    </div>
+                </td>
+                <td style="border: 1px solid black; display: inline-block; width: 500px;">
+                    <div id="images"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="texts">
+                    <div style="display: inline-block;" width = 500px >
+                        <input type="text" placeholder="Text1" class="divtext" id="text1" value="">              
+                        <input type="text" placeholder="Text2" class="divtext"  id="text2" value="">                                           
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div style = "position:relative; left:230px; top:2px; ">
+                        <button id="addbtn">Add Text</button>     
+                     </div>
+                </td>  
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <button id="generatebtn" style="border-radius: 20px; position: relative;">Generate</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+
+    <script>
+        $(function (param){
+            $("#hidebtn").on("click",function(){
+                $("p").hide(5000);
+            })
+
+            $("#showbtn").on("click",function(){
+                $("p").show("fast");
+            })
+
+            $("#togglebtn").on("click",function(){
+                $("p").toggle();
+            })
+
+            $("#fadetobtn").on("click",function(){
+                $("p").fadeTo("slow",0.4);
+            })
+
+            $("#slidedownbtn").on("click",function(){
+                $("p").slideDown("slow");
+            })
+
+            $("#movebtn").on("click",function(){
+                $("#mydiv").animate({
+                    left:'250px'
+                });
+            })
+
+            $("#changing").on("click",function(){
+                $("p.myp").css
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nisi corporis dolorem dolorum sunt eaque exercitationem error quis, ab laboriosam tenetur distinctio aliquid hic pariatur vero ipsa quasi consequatur? Saepe.</p>
+
+    <div style="width: 100px; background-color: red;position: relative;" id="mydiv"></div>
+
+    <button id="hidebtn">hide</button>
+    <button id="showbtn">show</button>
+    <button id="togglebtn">Toggle</button>
+    <button id="fadetobtn">Fadeto</button>
+    <button id="slidedownbtn">slidedown</button>
+
+    <button id="movebtn">Move</button>
+
+    <button id="changing"></button>
+</body>
+</html>

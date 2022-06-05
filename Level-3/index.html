@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQ Introduction</title>
+    <!-- J query -->
+    <script src="jquery.min.js"></script>
+    <!-- Custom -->
+    <script src="custom.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var h2 = $("h2");//elment ko loke tr
+            console.log(h2)
+
+            var myp = $("#myp");//ID ko loke tr
+            console.log(myp)
+
+            var article = $(".detail"); //class ko select loke tr
+            console.log(article)
+
+            $("button").click(function() {
+                alert('ok')
+            })
+        })
+    </script>
+</head>
+<body>
+    <h2>Hello World!</h2>
+    <h2>Hello JQ</h2>
+    <button>click</button>
+    <p class="myp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas. Suscipit nobis hic nulla alias rem consequatur, odit commodi numquam tempore ipsum voluptates animi reprehenderit, explicabo sapiente cumque possimus eius.</p>
+    <article class="detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe est aperiam voluptate sit voluptatibus, doloribus optio perspiciatis possimus commodi nesciunt, tempora minus dolorem corrupti veritatis provident quae debitis molestias tempore.</article>
+    <div class="detail">
+        This is detail
+    </div>
+</body>
+</html>

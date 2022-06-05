@@ -1,0 +1,38 @@
+*{
+    font-family: SourceSansPro-Regular;
+}
+
+
+.maincolor{
+    color: #fdec03;
+}
+.custom_bgcolor{
+    background-color: #0f172B;
+}
+.smallfont{
+    font: 12px;
+}
+
+.carousel-inner .carousel-item img{
+    height: 70vh;
+    object-fit: cover;
+}
+
+h1 h2 h3 h4 h5 h6{
+    font-family: SourceSansPro-Bold;
+}
+
+.nav-pills .nav-link{
+    color: #3b3c36;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: #0f172B;
+    color: #fdec03;
+}
+
+#joinsection{
+    background: url(../img/background.jpg) no-repeat center fixed;
+    background-size: cover;
+    
+}

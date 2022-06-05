@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        .mytable{
+            margin-left: auto;
+            margin-right: auto;  
+            margin-top: 60px;
+            box-shadow: 10px 10px 5px rgb(174, 173, 173);
+            padding: 20px;
+            }
+        #images{
+            width: 250px;
+            height: 80px;
+            overflow: auto;
+            overflow-y: hidden;
+            margin: 0 auto;
+            white-space: nowrap
+            
+        }
+        ::-webkit-scrollbar{
+            background: images;
+        }
+    </style>
+    <script>
+        const app= Vue.createApp({
+            data(){
+                return{
+                    memes: [],
+                }
+            },
+            methods:{
+                getMemes(){
+                    axios.get('https://api.imgflip.com/get_memes')
+                        .then(Response =>{
+                            console.log(Response.data)
+                            if(Response.data.success == true){
+                                this.memes = Response.data.data.memes
+                            }
+                        })
+                        .catch(err =>{
+                            console.log(err)
+                        })
+                }
+            },
+            mounted(){
+                this.getMemes();
+            },
+        })
+    </script>
+</head>
+<body>
+    <div id="app">
+        <table class="mytable">
+            <tr>
+                <td>
+                    <div id="workspace" style="display: inline-block; margin: right 50px;">
+                        <img src="https://i.imgflip.com/30b1gx.jpg" alt="" class="sampleimg" width="300" height="400">
+                    </div>
+                    <div><h4></h4></div>
+                </td>
+                <td>
+                
+                        <div id="images" v-if="memes.length >0">
+                            <span v-for="meme in memes">
+                                <img :src="meme.url" :alt="meme.name">
+                            </span>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        const mountedApp = app.mount("#app")
+    </script>
+</body>
+</html>

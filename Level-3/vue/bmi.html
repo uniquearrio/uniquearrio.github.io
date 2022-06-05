@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        const app = Vue.createApp({
+            
+          data() {
+            return {
+              feet: "",
+              inches: "",
+              lb: "",
+              result:"",
+            };
+          },
+          methods:{
+            caculate(){
+              var totalinches = (this.feet*12) + this.inches
+              this.result = (703*this.lb/(totalinches ** 2))
+            },
+            condition(){
+              if(result<18.5){
+                    
+                    this.under= 'You are underweight'
+            
+                }if(result>18.5 && result <25){
+            
+                    this.normal='you are normal'
+             
+                }if(result>25 && result<30){
+
+                      this.over='you are overweight'
+
+                }if(result>30){
+                    this.obesity='you are obesity'
+                } 
+            },
+          }
+        })
+</script>
+
+</head>
+<body>
+  
+        <div id="app" margin="center">
+            <label for="feet">Heeight(ft)</label>
+            <input type="number" name="feet" V-model="feet"> <br> <br>
+            <label for="inches">(inches)</label>
+            <input type="number" name="inches" V-model="inches"> <br> <br>
+            <label for="weight(lb)">Weight(lb)</label>
+            <input type="number" name="lb" V-model="lb"> <br><br>
+            <button @click="caculate" type="button">Caculate</button>
+            <p>Your bmi is {{result}}</p> <br><br>
+            
+        </div>
+        
+    
+
+    <script>
+        const mountedApp = app.mount("#app");
+    </script>
+</body>
+</html>

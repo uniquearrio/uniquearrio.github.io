@@ -1,0 +1,40 @@
+*{
+    font-family: 'SourceSanPro_Regular';
+}
+.maincolor{
+    color: #FDEC03;
+}
+
+.custom_bgcolor{
+    background-color: #0F172B;
+}
+
+.smallfont{
+    font-size: 12px;
+}
+
+.carousel-inner .carousel-item img{
+    height: 70vh;
+    object-fit: cover;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'SourceSanPro_Black';
+}
+
+.nav-pills .nav-link{
+    color: #3B3C36;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: #0F172B;
+    color: #FDEC03;
+}
+
+#joinsection{
+    background: url(../img/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+}

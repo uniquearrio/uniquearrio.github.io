@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function(){
+            // boc default checked for single
+            $("#spouse").hide();
+
+            // radio input change event
+            $('input[type=radio][name=status]').change(function() {
+                if ($(this).val() == 1) {
+                    $("#spouse").show();
+                }
+                else if ($(this).val() == 0) {
+                    $("#spouse").hide();
+                }
+            });
+
+            // submit form event
+            $("#myform").on("submit", function(event) {
+                // prevent default form action event
+                event.preventDefault();
+
+                // getting form input value
+                var username = $("#username").val();
+                var age = $("#age").val();
+                var status = $('input[name=status]:checked').val()
+
+                //console.log(status);
+                
+                var data = ""
+                if(status == 1){
+                    var spouse = $("#spouse").val();
+                    data += `${username} is ${age} years old and married. Spouse name is ${spouse}.`
+                }else{
+                    data += `${username} is ${age} years old and single.`
+                }
+
+                alert(data)
+            })
+        })
+    </script>
+</head>
+<body>
+    <form action="" id="myform">
+        <input type="text" name="username" id="username"> <br>
+        <input type="number" name="age" id="age"> <br>
+        <input type="radio" name="status" value="0" id="single" checked> 
+        <label for="single">Single</label>
+        <input type="radio" name="status" value="1" id="married">
+        <label for="married">Married</label>
+        <br>
+        <input type="text" name="spouse" id="spouse"> <br>
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>

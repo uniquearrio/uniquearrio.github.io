@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEME web</title>
+</head>
+<style>
+    .display {
+        display:block;
+    }
+    .meme_generator {
+        margin: 20px auto;
+        width: 400px;
+        
+    }
+    .meme_generator label{
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .meme_generator input{
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+    #meme {
+        width: 100%;
+        
+    }
+</style>
+<script src="jquery.min.js"></script>
+<script>
+
+</script>
+<body>
+    <div class="meme_generator">
+        <div class="display">
+        <label for="">select img</label>
+        <input type="array" id="imgarray">
+        <label for="">Top Text</label>
+        <input type="text" id="toptext">
+        <label for="">Button Text</label>
+        <input type="text" id="buttontext">
+        </div>
+        <div class="display">
+        <canvas id="meme"></canvas>
+        </div>
+    </div>
+</body>
+</html>
